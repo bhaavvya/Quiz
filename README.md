@@ -32,7 +32,7 @@ git push origin branch-name</code></pre>
   <li>Wait for your PR review and merge approval!</li>
   <li>Star this repository if you had fun!</li>
 </ol>
-<h2>Choose from these tasks</h2>
+<h2>Contribution.md File should include</h2>
 <ol>
   <li><strong>Add your name</strong></li>
   <p>Add your name to the CONTRIBUTORS.md file using the below convention:</p>
