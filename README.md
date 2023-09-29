@@ -3,7 +3,7 @@
 <p>Use this project to make your first contribution to an open source project on GitHub. Practice making your first pull request to a public repository before doing the real thing!</p>
 <p>Celebrate Hacktoberfest by getting involved in the open source community by completing some simple tasks in this project.</p>
 <p>This repository is open to all members of the GitHub community. Any member can contribute to this project.</p>
-<p>➡ </a></p>
+
 <p><strong>New to Open Source ? No worries I will teach you how to contribute :</strong></p>
 <h2>What is Hacktoberfest?</h2>
 <p>A month-long celebration from October 1st - 31st sponsored by Digital Ocean and GitHub to get people involved in Open Source. Create your very first pull request to any public repository on GitHub and contribute to the open source developer community.</p>
