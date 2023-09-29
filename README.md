@@ -13,8 +13,8 @@
 <ol>
   <li>⭐Star the Project.</li>
   <li>Connect with Project Admin on Linkedin : <a href="https://www.linkedin.com/in/bhavya-verma-754983247/">https://www.linkedin.com/in/bhavya-verma-754983247/</a></li>
-  <li>Add your name to the CONTRIBUTORS.md file.</li>
   <li>Make a pull request and wait for it to be merged!</li>
+  <li>Add your name to the CONTRIBUTORS.md file.</li>
 </ol>
 <h2>Getting started</h2>
 <ol>
