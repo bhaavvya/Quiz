@@ -8,9 +8,10 @@
 
 :root {
   --primary_color: #095ca0;
-  --secondary_color: #FF6B6B;
+  --secondary_color: #2891d6;
   --text_color: #333;
-  --background_color: #f4f4f4;
+  --background_color_start: #9dcbf7;
+  --background_color_end: #001741; 
 }
 
 body {
