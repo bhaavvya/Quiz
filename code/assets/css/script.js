@@ -1,5 +1,4 @@
 
-
 const main = document.querySelector("main");
 
 const start = document.querySelector(".start");
@@ -9,7 +8,6 @@ const leaderboard = document.querySelector("#leaderboard");
 function generateQuiz({ question, options, answer }) {
   let isChoose = false;
   const handleClick = (e) => {
-    // alert("handle click");
     if (isChoose) return;
     isChoose = true;
     const opt = e.target;
@@ -69,7 +67,7 @@ function displayAnswer(isCorrect) {
   if (!isCorrect) time.textContent = time.textContent - 10;
   const answerDiv = document.createElement("div");
   answerDiv.classList.add("answer");
-  answerDiv.textContent = isCorrect ? "correct!" : "Incorrect!";
+  answerDiv.textContent = isCorrect ? "Well Done!👍" : "Incorrect!❌";
   main.append(answerDiv);
 }
 function updateQuiz(next) {
@@ -185,7 +183,7 @@ let timeId = null;
 function goBack() {
   main.innerHTML = `
   <h1>Coding Quiz Challange</h1>
-        <p class="description">Try to answer to following code-related questions within the
+        <p class="description">Try to answer the following code-related questions within the
             time limit.<br>
             Keep in mind that incorect answers will penalize your 
             score/time by ten seconds!
