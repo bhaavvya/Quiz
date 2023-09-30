@@ -43,8 +43,12 @@ function generateQuiz({ question, options, answer }) {
 
 function handleSubmit(e) {
   e.preventDefault();
-  alert("submit");
   const initials = document.querySelector('input[name="initials"]').value;
+  if (!initials) {
+    alert("Please enter your initials.");
+    return;
+  }
+  alert("submit");
   const history = JSON.parse(localStorage.getItem("leaderboard")) || [];
   console.log("history: ", history);
   history.push({ name: initials, score: newScore});
