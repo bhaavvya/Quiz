@@ -184,12 +184,10 @@ let timeId = null;
 
 function goBack() {
   main.innerHTML = `
-  <h1>Coding Quiz Challange</h1>
-        <p class="description">Try to answer to following code-related questions within the
-            time limit.<br>
-            Keep in mind that incorect answers will penalize your 
-            score/time by ten seconds!
+  <h1>Coding Trivia Quiz</h1>
+        <p class="description">Can you tackle these programming questions within the time? Get ready to SPEEDRUN!
         </p>
+        <p class="description" id="warning"><strong>Keep in mind</strong> Incorrect answers will result in a time penalty of ten seconds!</p>
         <button class="start">Start Quiz</button>
   `;
   main.querySelector(".start").addEventListener("click", () => {
