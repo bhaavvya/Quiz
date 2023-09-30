@@ -1,13 +1,4 @@
 * {
-  
-  main {
-    padding: 2rem;
-    border: 0.1rem solid gray;
-    width: 45em;
-    margin: 5rem auto;
-    border-radius: 2rem;
-    box-shadow: 0.1rem 0.2rem 0.2rem gray;
-  }
   main .description {
     line-height: 2;
     margin-top: 1rem;
