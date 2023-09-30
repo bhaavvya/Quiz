@@ -113,3 +113,12 @@ main .start:hover {
   background-color: var(--secondary_color);
 }
 
+input[name="initials"] {
+  width: 8em;
+  height: 2em;
+  margin-right: 0.5em;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.4rem;
+}
+
