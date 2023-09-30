@@ -43,3 +43,31 @@ main {
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+main h1 {
+  font-size: 2.5rem;
+  color: var(--primary_color);
+  margin-bottom: 1.5rem;
+}
+
+main .description {
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  color: #777;
+}
+
+main .start {
+  padding: 1rem 2rem;
+  font-weight: bold;
+  color: white;
+  background-color: var(--primary_color);
+  border-radius: 0.4rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+main .start:hover {
+  background-color: var(--secondary_color);
+}
+
