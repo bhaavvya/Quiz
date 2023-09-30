@@ -1,18 +1,4 @@
 * {
-  
-  /* show result  */
-  .show_score {
-    margin-bottom: 1rem;
-    margin-top: 1rem;
-  }
-  
-  .submit {
-    padding: 0.4rem 0.5rem;
-    color: white;
-    background-color: var(--primary_color);
-    border-radius: 0.4rem;
-    border: none;
-  }
   input[name="initials"] {
     width: 8em;
     height: 2em;
