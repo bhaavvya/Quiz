@@ -133,7 +133,10 @@ input[name="initials"] {
   border-radius: 0.4rem;
 }
 
-/* Leaderboard styles */
+#leaderboard{
+  cursor: pointer;
+}
+
 .answer {
   border-top: 1px solid #ddd;
   padding-top: 1rem;
