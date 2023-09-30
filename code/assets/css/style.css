@@ -116,6 +116,10 @@ main .start:hover {
   transition: background-color 0.3s ease;
 }
 
+#warning{
+  color: red;
+}
+
 .submit:hover {
   background-color: var(--secondary_color);
 }
