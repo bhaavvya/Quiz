@@ -1,12 +1,4 @@
 * {
-  main .start {
-    padding: 0.7rem;
-    font-weight: bold;
-    color: white;
-    background-color: var(--primary_color);
-    border-radius: 0.4rem;
-    border: none;
-  }
   
   /* quiz  */
   .question {
