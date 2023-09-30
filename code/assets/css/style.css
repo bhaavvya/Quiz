@@ -96,4 +96,15 @@
   #go_back {
     margin-right: 1em;
   }
+
+
+    .footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color:var(--primary_color);
+      color: white;
+      text-align: center;
+    }
   
