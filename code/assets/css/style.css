@@ -4,3 +4,10 @@
   box-sizing: border-box;
 }
 
+:root {
+  --primary_color: #095ca0;
+  --secondary_color: #FF6B6B;
+  --text_color: #333;
+  --background_color: #f4f4f4;
+}
+
