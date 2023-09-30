@@ -4,6 +4,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 :root {
@@ -65,6 +66,7 @@ main h1 {
   font-size: 2.5rem;
   color: var(--primary_color);
   margin-bottom: 1.5rem;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
 }
 
 main .description {
