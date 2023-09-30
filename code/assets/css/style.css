@@ -33,3 +33,13 @@ nav .time {
   width: 2em;
 }
 
+main {
+  padding: 2rem;
+  border: 1px solid #ddd;
+  max-width: 800px;
+  margin: 5rem auto;
+  border-radius: 1rem;
+  background-color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
