@@ -71,3 +71,11 @@ main .start:hover {
   background-color: var(--secondary_color);
 }
 
+/* Quiz styles */
+.question {
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--text_color);
+}
+
