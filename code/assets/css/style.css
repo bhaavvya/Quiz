@@ -122,3 +122,14 @@ input[name="initials"] {
   border-radius: 0.4rem;
 }
 
+/* Leaderboard styles */
+.answer {
+  border-top: 1px solid #ddd;
+  padding-top: 1rem;
+}
+
+.leaderboard_show {
+  padding: 1rem;
+  background-color: white;
+}
+
