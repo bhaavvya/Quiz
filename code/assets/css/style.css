@@ -1,12 +1,4 @@
 * {
-  input[name="initials"] {
-    width: 8em;
-    height: 2em;
-    margin-right: 0.5em;
-  }
-  input:focus {
-    outline: none;
-  }
   
   .answer {
     border-top: 0.2rem solid gray;
