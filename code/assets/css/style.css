@@ -11,3 +11,10 @@
   --background_color: #f4f4f4;
 }
 
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--background_color);
+  color: var(--text_color);
+  line-height: 1.6;
+}
+
