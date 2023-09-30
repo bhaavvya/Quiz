@@ -1,13 +1,4 @@
 * {
-  
-  .answer {
-    border-top: 0.2rem solid gray;
-    padding-top: 1rem;
-  }
-  
-  .leaderboard_show {
-    padding: 1rem;
-  }
   #go_back,
   #clear_highscores {
     background-color: var(--primary_color);
