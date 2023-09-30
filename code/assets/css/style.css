@@ -27,19 +27,28 @@
     border-radius: 2rem;
     box-shadow: 0.1rem 0.2rem 0.2rem gray;
   }
+  /* I've made the following changes here*/
   main .description {
-    line-height: 2;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-  }
+    line-height: 1.5; 
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+    font-size: 1.1rem; 
+    color: #333; /* Change the text color to a dark gray  */
+}
+
+  /*style start quiz button*/
   main .start {
-    padding: 0.7rem;
+    padding: 0.7rem 1.5rem;
     font-weight: bold;
     color: white;
     background-color: var(--primary_color);
     border-radius: 0.4rem;
     border: none;
-  }
+    cursor: pointer;
+}
+
+
+
   
   /* quiz  */
   .question {
