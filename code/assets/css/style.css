@@ -1,14 +1,5 @@
 * {
   
-  }
-  .option {
-    padding: 1rem;
-    background-color: var(--primary_color);
-    color: white;
-    border-radius: 0.5rem;
-    margin-bottom: 0.2rem;
-  }
-  
   /* show result  */
   .show_score {
     margin-bottom: 1rem;
