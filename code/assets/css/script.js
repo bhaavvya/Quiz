@@ -4,7 +4,7 @@ const main = document.querySelector("main");
 const start = document.querySelector(".start");
 const time = document.querySelector(".time");
 const leaderboard = document.querySelector("#leaderboard");
-
+let newScore = 0;
 function generateQuiz({ question, options, answer }) {
   let isChoose = false;
   const handleClick = (e) => {
@@ -12,6 +12,7 @@ function generateQuiz({ question, options, answer }) {
     isChoose = true;
     const opt = e.target;
     displayAnswer(opt.dataset.idx == answer);
+
     setTimeout(
       () =>
         next >= quiz.length || Number(time.textContent) <= 0
@@ -46,14 +47,14 @@ function handleSubmit(e) {
   const initials = document.querySelector('input[name="initials"]').value;
   const history = JSON.parse(localStorage.getItem("leaderboard")) || [];
   console.log("history: ", history);
-  history.push({ name: initials, score: time.textContent });
+  history.push({ name: initials, score: newScore});
   localStorage.setItem("leaderboard", JSON.stringify(history));
 }
 function displayScore() {
   clearInterval(timeId);
   main.innerHTML = `
     <h1>All done!</h1>
-    <p class="show_score">Your final score is ${time.textContent}.</p>
+    <p class="show_score">Your final score is ${newScore}.</p>
     <form>
         <label>
             Enter initials: <input type="text" name="initials">
@@ -65,6 +66,7 @@ function displayScore() {
 }
 function displayAnswer(isCorrect) {
   if (!isCorrect) time.textContent = time.textContent - 10;
+  if(isCorrect)newScore++;
   const answerDiv = document.createElement("div");
   answerDiv.classList.add("answer");
   answerDiv.textContent = isCorrect ? "Well Done!👍" : "Incorrect!❌";
@@ -166,7 +168,7 @@ const quiz = [
     answer: 1,
   },
   {
-    question: "what is this",
+    question: "what is this?",
     options: [
       "1. quiz",
       "2. numbers and strings",
@@ -205,7 +207,7 @@ function displayLeaderboard() {
     ${(JSON.parse(localStorage.getItem("leaderboard")) || [])
       .sort((a, b) => b.score - a.score)
       .map((item, idx) => {
-        return `<div>${idx + 1}. ${item.name} - ${item.score}</div>`;
+        return `<div>${idx + 1}. ${item.name} : ${item.score}</div>`;
       })
       .join("")}
     </div>
