@@ -16,7 +16,10 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: var(--background_color);
+  background-image: linear-gradient(to bottom, var(--background_color_start), var(--background_color_end));
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
   color: var(--text_color);
   line-height: 1.6;
 }
