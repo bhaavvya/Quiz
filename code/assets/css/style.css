@@ -133,3 +133,18 @@ input[name="initials"] {
   background-color: white;
 }
 
+#go_back,
+#clear_highscores {
+  background-color: var(--primary_color);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.4rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#go_back:hover,
+#clear_highscores:hover {
+  background-color: var(--secondary_color);
+}
