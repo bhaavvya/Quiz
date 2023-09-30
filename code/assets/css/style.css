@@ -79,3 +79,17 @@ main .start:hover {
   color: var(--text_color);
 }
 
+.option {
+  padding: 1rem;
+  background-color: var(--primary_color);
+  color: white;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.option:hover {
+  background-color: var(--secondary_color);
+}
+
