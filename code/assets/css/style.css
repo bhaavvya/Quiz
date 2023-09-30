@@ -25,6 +25,7 @@ body {
 }
 
 nav {
+  height: 4rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -37,6 +38,16 @@ nav {
 nav .time {
   display: inline-block;
   width: 2em;
+}
+
+.navbar-logo{
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-logo > img{
+  width: 4rem;
 }
 
 main {
