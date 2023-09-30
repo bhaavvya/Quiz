@@ -176,7 +176,58 @@ const quiz = [
       "4. all of the above",
     ],
     answer: 3,
-  }
+  },
+  {
+    question: "What is the purpose of a loop in programming?",
+    options: [
+      "1. To define a function",
+      "2. To create addition statement",
+      "3. To repeat a block of code several number of times",
+      "4. all of the above",
+    ],
+    answer: 3,
+  },
+  {
+    question: "Which programming language is known for its use in developing mobile applications",
+    options: [
+      "1. HTML",
+      "2. Swift",
+      "3. Javacript",
+      "4. C#",
+    ],
+    answer: 2,
+  },
+  {
+    question: "What is the purpose of the border property in CSS",
+    options: [
+      "1. To set the background color of an element",
+      "2. To create a border around an HTML element",
+      "3. To change the font size of text",
+      "4. To define a variable in CSS",
+    ],
+    answer: 2,
+  },
+  {
+    question: "Which of the following is a dynamically typed programming language",
+    options: [
+      "1. Python",
+      "2. Ruby",
+      "3. C++",
+      "4. Java",
+    ],
+    answer: 1,
+  },
+  {
+    question: "What is the purpose of a gitignore file in a Git repository",
+    options: [
+      "1. To store the Git commit history",
+      "2. To define a new branch in Git",
+      "3. To specify which files and directories should be excluded from version control",
+      "4. To merge multiple repositories together",
+    ],
+    answer: 3,
+  },
+
 ];
 
 let next = 1;
@@ -193,6 +244,7 @@ function goBack() {
         <button class="start">Start Quiz</button>
   `;
   main.querySelector(".start").addEventListener("click", () => {
+    console.log("Start button clicked"); // Add this line for debugging
     generateQuiz(quiz[0]);
     time.textContent = "50";
     next = 1;
