@@ -1,11 +1,10 @@
 
-
 const main = document.querySelector("main");
 
 const start = document.querySelector(".start");
 const time = document.querySelector(".time");
 const leaderboard = document.querySelector("#leaderboard");
-
+let newScore=0;
 function generateQuiz({ question, options, answer }) {
   let isChoose = false;
   const handleClick = (e) => {
@@ -48,14 +47,14 @@ function handleSubmit(e) {
   const initials = document.querySelector('input[name="initials"]').value;
   const history = JSON.parse(localStorage.getItem("leaderboard")) || [];
   console.log("history: ", history);
-  history.push({ name: initials, score: time.textContent });
+  history.push({ name: initials, score: newScore });
   localStorage.setItem("leaderboard", JSON.stringify(history));
 }
 function displayScore() {
   clearInterval(timeId);
   main.innerHTML = `
     <h1>All done!</h1>
-    <p class="show_score">Your final score is ${time.textContent}.</p>
+    <p class="show_score">Your final score is ${newScore}.</p>
     <form>
         <label>
             Enter initials: <input type="text" name="initials">
@@ -63,10 +62,11 @@ function displayScore() {
         <button class="submit">Submit</button>
     </form>    
     `;
-  main.querySelector(".submit").addEventListener("click", handleSubmit);
+    main.querySelector(".submit").addEventListener("click", handleSubmit);
 }
 function displayAnswer(isCorrect) {
   if (!isCorrect) time.textContent = time.textContent - 10;
+  if(isCorrect)newScore++;
   const answerDiv = document.createElement("div");
   answerDiv.classList.add("answer");
   answerDiv.textContent = isCorrect ? "correct!" : "Incorrect!";
@@ -89,12 +89,7 @@ const quiz = [
   },
   {
     question: "JavaScript is a ________-side programming language.",
-    options: [
-      "1. server",
-      "2. client",
-      "3. both",
-      "4. non of the above",
-    ],
+    options: ["1. server", "2. client", "3. both", "4. non of the above"],
     answer: 3,
   },
   {
@@ -109,32 +104,17 @@ const quiz = [
   },
   {
     question: "In Python, which keyword is used to define a function?",
-    options: [
-      "1. fun",
-      "2. def",
-      "3. booleans",
-      "4. all of the above",
-    ],
+    options: ["1. fun", "2. def", "3. booleans", "4. all of the above"],
     answer: 2,
   },
   {
     question: "Which of the following is not a programming language?",
-    options: [
-      "1. Python",
-      "2. HTML",
-      "3. C++",
-      "4. all of the above",
-    ],
+    options: ["1. Python", "2. HTML", "3. C++", "4. all of the above"],
     answer: 2,
   },
   {
     question: `What is the result of 10 + "5" in JavaScript?`,
-    options: [
-      "1. 10",
-      "2. 15",
-      "3. 105",
-      "4. all of the above",
-    ],
+    options: ["1. 10", "2. 15", "3. 105", "4. all of the above"],
     answer: 3,
   },
   {
@@ -148,7 +128,8 @@ const quiz = [
     answer: 1,
   },
   {
-    question: "Which data type is used to represent a true or false value in Python?",
+    question:
+      "Which data type is used to represent a true or false value in Python?",
     options: [
       "1. other arrays",
       "2. numbers and strings",
@@ -176,7 +157,7 @@ const quiz = [
       "4. all of the above",
     ],
     answer: 3,
-  }
+  },
 ];
 
 let next = 1;
@@ -222,3 +203,5 @@ leaderboard.addEventListener("click", displayLeaderboard);
 
 // Initial
 goBack();
+
+
