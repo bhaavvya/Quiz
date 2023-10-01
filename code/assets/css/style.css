@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
+body {
   position: relative;
   width: 100%;
   height: 100vh;
@@ -14,17 +14,18 @@ body{
   font-family: 'Montserrat', sans-serif;
 }
 
-a, a:hover{
+a,
+a:hover {
   text-decoration: none;
 }
 
-li{
+li {
   list-style: none;
 }
 
 /* ...............................................................................*/
 /* Main */
-.container{
+.container {
   position: relative;
   width: 100%;
   height: 90vh;
@@ -34,7 +35,7 @@ li{
   margin: auto;
 }
 
-nav{
+nav {
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -42,17 +43,19 @@ nav{
   width: 98%;
   margin: auto;
 }
-nav span{
+
+nav span {
   font-weight: 500;
   padding: 0 1rem;
 }
-nav #leaderboard{
+
+nav #leaderboard {
   padding-left: 8rem;
 }
 
 
 /* Right section */
-.container .right_Section{
+.container .right_Section {
   width: 50rem;
   height: 85vh;
   border-radius: 2rem;
@@ -65,20 +68,23 @@ nav #leaderboard{
   background-position: center;
   margin-right: 3rem;
 }
-.right_Section img{
+
+.right_Section img {
   width: 100%;
   height: 86%;
   border-radius: 2rem;
   transform: rotate(180deg);
 }
-.img3{
+
+.img3 {
   position: absolute;
   width: 6rem;
   height: 6rem;
   border-radius: 50%;
   top: 4rem;
 }
-.img2{
+
+.img2 {
   position: absolute;
   width: 7rem;
   height: 10rem;
@@ -87,7 +93,7 @@ nav #leaderboard{
   left: -1.6rem;
 }
 
-.right_Section h3{
+.right_Section h3 {
   position: relative;
   font-weight: 600;
   letter-spacing: .12rem;
@@ -99,7 +105,7 @@ nav #leaderboard{
   /* color: #fff; */
 }
 
-.right_Section h3::after{
+.right_Section h3::after {
   content: '';
   position: absolute;
   bottom: -1rem;
@@ -113,7 +119,7 @@ nav #leaderboard{
 
 /* Left seciton */
 
-.left_Section{
+.left_Section {
   position: relative;
   width: 80%;
   height: 100%;
@@ -126,11 +132,11 @@ nav #leaderboard{
   /* background: #93dd93; */
 }
 
-.left_Section main{
+.left_Section main {
   position: relative;
 }
 
-main h1::after{
+main h1::after {
   content: '';
   position: absolute;
   width: 24%;
@@ -140,79 +146,87 @@ main h1::after{
   border-radius: 5rem;
 
 }
-main .option{
+
+main .option {
   cursor: pointer;
   margin: 1rem;
   border-radius: 2rem;
   background: #fff;
 }
-main .question::before{
+
+main .question::before {
   content: '';
   position: absolute;
   width: 35rem;
   height: 70vh;
-  background: -webkit-linear-gradient(to right, #EF629F, #EECDA3); 
-  background: linear-gradient(to right, #EF629F, #EECDA3); 
+  background: -webkit-linear-gradient(to right, #EF629F, #EECDA3);
+  background: linear-gradient(to right, #EF629F, #EECDA3);
   top: -3rem;
   left: -1rem;
   border-radius: 1rem;
   z-index: -1;
 }
 
-main .description span{
+main .description span {
   font-weight: 700;
   letter-spacing: .14rem;
 }
 
-main .answer{
+main .answer {
   color: #fff;
   font-size: 1.4rem;
   padding-top: .2rem;
   padding-left: 2rem;
 }
-main .question, .option{
+
+main .question,
+.option {
   position: relative;
   padding: 1.4rem 2rem;
 }
-form{
+
+form {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
 }
-form label{
+
+form label {
   font-weight: 500;
 }
-form input{
+
+form input {
   border-radius: 3rem;
   width: auto;
   padding: .3rem;
   outline: none;
   margin-left: 1.4rem;
 }
-.left_Section h1{
+
+.left_Section h1 {
   font-size: 3.6rem;
   width: 70%;
-  letter-spacing: .34rem; 
+  letter-spacing: .34rem;
   margin-bottom: .4rem;
   font-weight: 700;
 }
 
-.left_Section p{
+.left_Section p {
   font-weight: 500;
   width: 80%;
   line-height: 2;
   margin: 1rem 0;
 }
 
-button{
+button {
   padding: 1rem 1.6rem;
   width: 24rem;
   border: none;
   color: #fff;
   background: linear-gradient(to right, #A5FECB, #20BDFF, #5433FF);
-  box-shadow: 16px 12px 18px 0px rgba(0,0,0,0.18);
--webkit-box-shadow: 16px 12px 18px 0px rgba(0,0,0,0.18);
+  box-shadow: 16px 12px 18px 0px rgba(0, 0, 0, 0.18);
+  -webkit-box-shadow: 16px 12px 18px 0px rgba(0, 0, 0, 0.18);
   font-size: 1.14rem;
   font-weight: 500;
   letter-spacing: .02rem;
@@ -221,19 +235,21 @@ button{
   transition: all ease-in-out 0.3s;
 }
 
-.left_Section button:hover{
+.left_Section button:hover {
   transform: scale(1.1);
 }
 
 
 @media screen and (max-width: 760px) {
-  .container{
+  .container {
     margin: auto;
   }
-  .container .right_Section{
+
+  .container .right_Section {
     display: none;
   }
-  .container::before{
+
+  .container::before {
     content: '';
     position: absolute;
     background: url('/Quiz_App/code/assets/bg.png');
@@ -244,18 +260,17 @@ button{
     left: -3.5rem;
     bottom: -3.5rem;
   }
-  
-  .left_Section{
+
+  .left_Section {
     position: relative;
     width: 100%;
     height: 85vh;
-    text-align: center; 
+    text-align: center;
     padding-left: 0;
   }
-  
-  .left_Section button{
+
+  .left_Section button {
     width: 14rem;
     margin: auto;
   }
- 
 }
