@@ -1,10 +1,10 @@
 
-### Name:[Mangal Gupta](https://github.com/mangalgithub)
+### Name:[Love Sonkar](https://github.com/love-sonkar)
 
--Place : Lucknow,Uttar Pradesh, India
+-Place : Kurud, Dhamtari [C.G], India
 
--Bio: Computer Science Student and a problem solver.
+-Bio: frontend-webdevloper.
 
--Github:[mangalgithub](https://github.com/mangalgithub)
+-Github:[love-sonkar](https://github.com/love-sonkar)
 
 
