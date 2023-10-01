@@ -47,6 +47,11 @@ function generateQuiz({ question, options, answer }) {
 function handleSubmit(e) {
   e.preventDefault();
   const initials = document.querySelector('input[name="initials"]').value;
+  if(!initials){
+    alert("Please enter your initials");
+    return;
+  }
+
   const history = JSON.parse(localStorage.getItem("leaderboard")) || [];
   console.log("history: ", history);
   history.push({ name: initials, score: newScore });
@@ -70,7 +75,7 @@ function displayScore() {
 }
 
 function displayAnswer(isCorrect) {
-  if (!isCorrect) time.textContent = time.textContent - 10;
+  if (!isCorrect) time.textContent =Math.max(0,time.textContent - 10);
   if (isCorrect) newScore++;
   const answerDiv = document.createElement("div");
   answerDiv.classList.add("answer");
@@ -204,7 +209,7 @@ function displayLeaderboard() {
     ${(JSON.parse(localStorage.getItem("leaderboard")) || [])
       .sort((a, b) => b.score - a.score)
       .map((item, idx) => {
-        return `<div>${idx + 1}. ${item.name} - ${item.score}</div>`;
+        return `<div>${idx + 1}. ${item.name} : ${item.score}</div>`;
       })
       .join("")}
     </div>
