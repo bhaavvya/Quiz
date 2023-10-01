@@ -1,3 +1,4 @@
+
 const main = document.querySelector("main");
 
 const start = document.querySelector(".start");
@@ -202,3 +203,5 @@ leaderboard.addEventListener("click", displayLeaderboard);
 
 // Initial
 goBack();
+
+

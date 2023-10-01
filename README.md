@@ -13,8 +13,9 @@
 <ol>
   <li>⭐Star the Project.</li>
   <li>Connect with Project Admin on Linkedin : <a href="https://www.linkedin.com/in/bhavya-verma-754983247/">https://www.linkedin.com/in/bhavya-verma-754983247/</a></li>
-  <li>Add your name to the CONTRIBUTORS.md file.</li>
+  <li>Raise an issue</li>
   <li>Make a pull request and wait for it to be merged!</li>
+  <li>Add your name to the CONTRIBUTORS.md file.</li>
 </ol>
 <h2>Getting started</h2>
 <ol>
@@ -32,7 +33,7 @@ git push origin branch-name</code></pre>
   <li>Wait for your PR review and merge approval!</li>
   <li>Star this repository if you had fun!</li>
 </ol>
-<h2>Choose from these tasks</h2>
+<h2>Contribution.md File should include</h2>
 <ol>
   <li><strong>Add your name</strong></li>
   <p>Add your name to the CONTRIBUTORS.md file using the below convention:</p>
