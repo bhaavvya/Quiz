@@ -1,5 +1,4 @@
 const main = document.querySelector("main");
-
 const start = document.querySelector(".start");
 const time = document.querySelector(".time");
 const leaderboard = document.querySelector("#leaderboard");
@@ -7,7 +6,6 @@ let newScore=0;
 function generateQuiz({ question, options, answer }) {
   let isChoose = false;
   const handleClick = (e) => {
-    // alert("handle click");
     if (isChoose) return;
     isChoose = true;
     const opt = e.target;
@@ -68,7 +66,7 @@ function displayAnswer(isCorrect) {
   if(isCorrect)newScore++;
   const answerDiv = document.createElement("div");
   answerDiv.classList.add("answer");
-  answerDiv.textContent = isCorrect ? "correct!" : "Incorrect!";
+  answerDiv.textContent = isCorrect ? "Well Done!👍" : "Incorrect!❌";
   main.append(answerDiv);
 }
 function updateQuiz(next) {
