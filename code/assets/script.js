@@ -69,7 +69,7 @@ function displayAnswer(isCorrect) {
   if(isCorrect)newScore++;
   const answerDiv = document.createElement("div");
   answerDiv.classList.add("answer");
-  answerDiv.textContent = isCorrect ? "correct!" : "Incorrect!";
+  answerDiv.textContent = isCorrect ? "correct! 👍" : "Incorrect! ❌";
   main.append(answerDiv);
 }
 function updateQuiz(next) {
