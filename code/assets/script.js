@@ -66,7 +66,7 @@ function displayAnswer(isCorrect) {
   if(isCorrect)newScore++;
   const answerDiv = document.createElement("div");
   answerDiv.classList.add("answer");
-  answerDiv.textContent = isCorrect ? "Well Done!👍" : "Incorrect!❌";
+  answerDiv.textContent = isCorrect ? "Well Done!👍" : "Wrong!❌";
   main.append(answerDiv);
 }
 function updateQuiz(next) {
