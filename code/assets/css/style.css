@@ -1,9 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+  --primary_color: #095ca0;
+  --secondary_color: #2891d6;
+  --text_color: #333;
+  --background_color_start: #9dcbf7;
+  --background_color_end: #001741; 
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: linear-gradient(to bottom, var(--background_color_start), var(--background_color_end));
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--text_color);
+  line-height: 1.6;
+}
+
+nav {
+  height: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--primary_color);
+  color: white;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav .time {
+  display: inline-block;
+  width: 2em;
+}
+
+.navbar-logo{
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-logo > img{
+  width: 4rem;
+}
+
+main {
+  padding: 2rem;
+  border: 1px solid #ddd;
+  max-width: 800px;
+  min-width: 200px;
+  margin: 5rem auto;
+  border-radius: 1rem;
+  background-color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+main h1 {
+  font-size: 2.5rem;
+  color: var(--primary_color);
+  margin-bottom: 1.5rem;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+}
+
+main .description {
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  color: #777;
+}
+
+main .start {
+  padding: 1rem 2rem;
+  font-weight: bold;
+  color: white;
+  background-color: var(--primary_color);
+  border-radius: 0.4rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+main .start:hover {
+  background-color: var(--secondary_color);
+}
+
+/* Quiz styles */
+.question {
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--text_color);
+}
+
+.option {
+  padding: 1rem;
+  background-color: var(--primary_color);
+  color: white;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.option:hover {
+  background-color: var(--secondary_color);
+}
+
+/* Show result styles */
+.show_score {
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+
+.submit {
+  padding: 0.5rem 1rem;
+  color: white;
+  background-color: var(--primary_color);
+  border-radius: 0.4rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#warning{
+  color: red;
+}
+
+.submit:hover {
+  background-color: var(--secondary_color);
+}
+
+input[name="initials"] {
+  width: 8em;
+  height: 2em;
+  margin-right: 0.5em;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.4rem;
+}
+
+#leaderboard{
+  cursor: pointer;
+}
+
+.answer {
+  border-top: 1px solid #ddd;
+  padding-top: 1rem;
+}
+
+.leaderboard_show {
+  padding: 1rem;
+  background-color: white;
+}
+
+#go_back,
+#clear_highscores {
+  background-color: var(--primary_color);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.4rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#go_back:hover,
+#clear_highscores:hover {
+  background-color: var(--secondary_color);
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
   :root {
     --primary_color: #218380;
   }
@@ -105,4 +279,3 @@
   #go_back {
     margin-right: 1em;
   }
-  
