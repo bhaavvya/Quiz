@@ -89,7 +89,7 @@ const quiz = [
   },
   {
     question: "JavaScript is a ________-side programming language.",
-    options: ["1. server", "2. client", "3. both", "4. non of the above"],
+    options: ["1. server", "2. client", "3. both", "4. none of the above"],
     answer: 3,
   },
   {
