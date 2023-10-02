@@ -1,10 +1,9 @@
-
 const main = document.querySelector("main");
 
 const start = document.querySelector(".start");
 const time = document.querySelector(".time");
 const leaderboard = document.querySelector("#leaderboard");
-let newScore=0;
+let newScore = 0;
 function generateQuiz({ question, options, answer }) {
   let isChoose = false;
   const handleClick = (e) => {
@@ -62,15 +61,24 @@ function displayScore() {
         <button class="submit">Submit</button>
     </form>    
     `;
-    main.querySelector(".submit").addEventListener("click", handleSubmit);
+  main.querySelector(".submit").addEventListener("click", handleSubmit);
 }
 function displayAnswer(isCorrect) {
   if (!isCorrect) time.textContent = time.textContent - 10;
-  if(isCorrect)newScore++;
+  if (isCorrect) newScore++;
   const answerDiv = document.createElement("div");
   answerDiv.classList.add("answer");
   answerDiv.textContent = isCorrect ? "correct!" : "Incorrect!";
   main.append(answerDiv);
+  if (isCorrect) {
+    let canvas = document.createElement("canvas");
+    canvas.classList.add("canvas-positioning");
+    document.body.append(canvas);
+    const js_confetti = new JSConfetti({ canvas });
+    js_confetti.addConfetti({
+      confettiRadius: 6,
+    });
+  }
 }
 function updateQuiz(next) {
   generateQuiz(quiz[next]);
@@ -203,5 +211,3 @@ leaderboard.addEventListener("click", displayLeaderboard);
 
 // Initial
 goBack();
-
-
