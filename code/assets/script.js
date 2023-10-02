@@ -49,6 +49,7 @@ function handleSubmit(e) {
   console.log("history: ", history);
   history.push({ name: initials, score: newScore });
   localStorage.setItem("leaderboard", JSON.stringify(history));
+  displayLeaderboard()
 }
 function displayScore() {
   clearInterval(timeId);
