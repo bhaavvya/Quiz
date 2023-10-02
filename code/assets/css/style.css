@@ -175,8 +175,8 @@ input[name="initials"] {
 #go_back:hover,
 #clear_highscores:hover {
   background-color: var(--secondary_color);
-  padding: 0;
-  margin: 0;
+  /* padding: 0;
+  margin: 0; */
   box-sizing: border-box;
 
 }
