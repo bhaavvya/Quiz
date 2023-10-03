@@ -170,8 +170,9 @@ let timeId = null;
 function goBack() {
   main.innerHTML = `
   <h1>Coding Trivia Quiz</h1>
-        <p class="description">Can you tackle these programming questions within the time? Get ready to SPEEDRUN!
+        <p class="description">Can you tackle these programming questions within the time? Get ready to SPEEDRUN!🚀
         </p>
+        
         <p class="description" id="warning"><strong>Keep in mind</strong> Incorrect answers will result in a time penalty of ten seconds!</p>
         <button class="start">Start Quiz</button>
   `;
