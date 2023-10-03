@@ -43,7 +43,7 @@ function generateQuiz({ question, options, answer }) {
 
 function handleSubmit(e) {
   e.preventDefault();
-  alert("submit");
+  alert("TRY AGAIN");
   const initials = document.querySelector('input[name="initials"]').value;
   const history = JSON.parse(localStorage.getItem("leaderboard")) || [];
   console.log("history: ", history);
