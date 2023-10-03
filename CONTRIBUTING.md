@@ -1,10 +1,10 @@
 
-### Name:[Love Sonkar](https://github.com/love-sonkar)
+### Name:[Victor Nwakpa](https://github.com/victornwakpa)
 
--Place : Kurud, Dhamtari [C.G], India
+-Place : Ebonyi State, Nigeria
 
--Bio: frontend-webdevloper.
+-Bio: frontend - web devloper.
 
--Github:[love-sonkar](https://github.com/love-sonkar)
+-Github:[Victorious](https://github.com/victornwakpa)
 
 
