@@ -218,8 +218,12 @@ function displayLeaderboard() {
   `;
   main.querySelector("#go_back").addEventListener("click", goBack);
   main.querySelector("#clear_highscores").addEventListener("click", () => {
-    localStorage.clear();
-    alert("clear all highscores");
+    const clickClear = confirm("clear all highscores") //Store the value of confirm()
+
+    // if the value of clickClear is true, execute the code below.
+    if (clickClear) {
+      localStorage.clear();
+    }
   });
 }
 
