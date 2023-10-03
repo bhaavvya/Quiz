@@ -43,12 +43,16 @@ function generateQuiz({ question, options, answer }) {
 
 function handleSubmit(e) {
   e.preventDefault();
-  alert("submit");
-  const initials = document.querySelector('input[name="initials"]').value;
-  const history = JSON.parse(localStorage.getItem("leaderboard")) || [];
-  console.log("history: ", history);
-  history.push({ name: initials, score: newScore });
-  localStorage.setItem("leaderboard", JSON.stringify(history));
+  const clickSubmit = confirm("submit"); //store the value of the confirm() alert
+
+  // if the value of clickSubmit is true, executed the code below
+  if (clickSubmit) {
+    const initials = document.querySelector('input[name="initials"]').value;
+    const history = JSON.parse(localStorage.getItem("leaderboard")) || [];
+    console.log("history: ", history);
+    history.push({ name: initials, score: newScore });
+    localStorage.setItem("leaderboard", JSON.stringify(history));
+  }
 }
 function displayScore() {
   clearInterval(timeId);
@@ -195,8 +199,12 @@ function displayLeaderboard() {
   `;
   main.querySelector("#go_back").addEventListener("click", goBack);
   main.querySelector("#clear_highscores").addEventListener("click", () => {
-    localStorage.clear();
-    alert("clear all highscores");
+    const clickClear = confirm("clear all highscores") //Store the value of confirm()
+
+    // if the value of clickClear is true, execute the code below.
+    if (clickClear) {
+      localStorage.clear();
+    }
   });
 }
 leaderboard.addEventListener("click", displayLeaderboard);
