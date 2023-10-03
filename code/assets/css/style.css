@@ -20,13 +20,17 @@
   }
   
   main {
-    padding: 2rem;
-    border: 0.1rem solid gray;
-    width: 45em;
-    margin: 5rem auto;
-    border-radius: 2rem;
-    box-shadow: 0.1rem 0.2rem 0.2rem gray;
+    background-image: url('main-bg.jpg');
+    background-size: cover;
+    padding: 4rem;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
   }
+
+.start:hover {
+    background-color: #FF5733; /* Change the background color on hover */
+    transform: scale(1.05); /* Add a scale effect on hover */
+}
   /* I've made the following changes here*/
   main .description {
     line-height: 1.5; 

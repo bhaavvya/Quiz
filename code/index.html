@@ -10,7 +10,7 @@
     <title>Quiz Project</title>
 </head>
 
-<body>
+<body  >
     <header>
         <nav>
 
@@ -20,7 +20,14 @@
         </nav>
 
     </header>
+    <label for="theme-select">Select Theme:</label>
+        <select id="theme-select">
+        <option value="light-theme" id="light-theme">Light Theme</option>
+        <option value="dark-theme" id="dark-theme">Dark Theme</option>
+        </select>
+
     <main>
+
         <h1>Coding Quiz Challange</h1>
         <p class="description">Try to answer to following code-related questions within the
             time limit.<br>
@@ -31,6 +38,33 @@
 
     </main>
     <script src="assets/script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const themeSelect = document.getElementById("theme-select");
+            const body = document.body;
+
+            // Event listener for the theme dropdown
+            themeSelect.addEventListener("change", function() {
+                const selectedTheme = themeSelect.value;
+
+                // Remove the existing theme classes
+                body.classList.remove("light-theme", "dark-theme");
+
+                // Add the selected theme class to change the background
+                body.classList.add(selectedTheme);
+            });
+
+            const main = document.querySelector("main");
+            const start = document.querySelector(".start");
+            const time = document.querySelector(".time");
+            const leaderboard = document.querySelector("#leaderboard");
+
+            // ... Rest of your existing code
+
+            // Initial
+            goBack();
+        });
+    </script>
 </body>
 
 </html>
