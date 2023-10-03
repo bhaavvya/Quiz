@@ -18,3 +18,8 @@ A clear and concise description of any alternative solutions or features you've 
 
 **Additional context**
 Add any other context or screenshots about the feature request here.
+
+---
+#sardiusjay
+# name: "adding a feature like rocket to the UI design in the content part of the page"
+# about : "for for beatuitfying the UI design of the website"
