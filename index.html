@@ -1,37 +1,39 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./code/assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./code/assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
     <title>Quiz Project</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <nav>
-
-        <a id=leaderboard>View Highscores <i class="fas fa-hand-point-left fa-lg"></i>
-        </i></a> 
-        <span>Time:<span class="time"></span></span>
-        </nav>
-
+      <nav>
+        <a id="leaderboard"
+          >View Highscores <i class="fas fa-hand-point-left fa-lg"></i
+        ></a>
+        <div>
+          <button id="reset_btn_nav" class="reset_btn">Reset</button>
+          <span>Time:<span class="time"></span></span>
+        </div>
+      </nav>
     </header>
     <main>
-        <h1>Coding Quiz Challenge</h1>
-        <p class="description">Try to answer the following code-related questions within the
-            time limit.<br>
-            Keep in mind that incorrect answers will penalize your 
-            score/time by ten seconds!
-        </p>
-        <button class="start">Start Quiz</button>
-
+      <h1>Coding Quiz Challenge</h1>
+      <p class="description">
+        Try to answer the following code-related questions within the time
+        limit.<br />
+        Keep in mind that incorrect answers will penalize your score/time by ten
+        seconds!
+      </p>
+      <button class="start">Start Quiz</button>
     </main>
     <script src="./code/assets/script.js"></script>
-</body>
-
+  </body>
 </html>

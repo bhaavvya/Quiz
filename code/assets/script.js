@@ -4,7 +4,7 @@ const main = document.querySelector("main");
 const start = document.querySelector(".start");
 const time = document.querySelector(".time");
 const leaderboard = document.querySelector("#leaderboard");
-let newScore=0;
+let newScore = 0;
 function generateQuiz({ question, options, answer }) {
   let isChoose = false;
   const handleClick = (e) => {
@@ -23,9 +23,18 @@ function generateQuiz({ question, options, answer }) {
   };
   main.innerHTML = "";
 
+  const resetBtn = document.createElement("div");
+  resetBtn.classList.add("reset-btn-div");
+  resetBtn.innerHTML = `<button id="reset_btn" class="reset_btn">Reset</button>`;
+  resetBtn.querySelector("#reset_btn").addEventListener("click", goBack);
+
   const queDiv = document.createElement("div");
   queDiv.classList.add("question");
   queDiv.textContent = question;
+
+  const queWithbtn = document.createElement("div");
+  queWithbtn.classList.add("question-with-btn");
+  queWithbtn.append(queDiv, resetBtn);
 
   const optionsDiv = document.createElement("div");
   optionsDiv.addEventListener("click", handleClick);
@@ -37,7 +46,8 @@ function generateQuiz({ question, options, answer }) {
     optionsDiv.append(optDiv);
   });
 
-  main.append(queDiv);
+
+  main.append(queWithbtn);
   main.append(optionsDiv);
 }
 
@@ -66,11 +76,11 @@ function displayScore() {
         <button class="submit">Submit</button>
     </form>    
     `;
-    main.querySelector(".submit").addEventListener("click", handleSubmit);
+  main.querySelector(".submit").addEventListener("click", handleSubmit);
 }
 function displayAnswer(isCorrect) {
   if (!isCorrect) time.textContent = time.textContent - 10;
-  if(isCorrect)newScore++;
+  if (isCorrect) newScore++;
   const answerDiv = document.createElement("div");
   answerDiv.classList.add("answer");
   answerDiv.textContent = isCorrect ? "correct!" : "Incorrect!";
@@ -175,6 +185,7 @@ function goBack() {
         <p class="description" id="warning"><strong>Keep in mind</strong> Incorrect answers will result in a time penalty of ten seconds!</p>
         <button class="start">Start Quiz</button>
   `;
+  time.textContent = "50";
   main.querySelector(".start").addEventListener("click", () => {
     generateQuiz(quiz[0]);
     time.textContent = "50";
@@ -212,4 +223,4 @@ leaderboard.addEventListener("click", displayLeaderboard);
 // Initial
 goBack();
 
-
+document.querySelector("#reset_btn_nav").addEventListener("click", goBack);
