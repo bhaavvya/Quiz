@@ -12,17 +12,16 @@ function generateQuiz({ question, options, answer }) {
     isChoose = true;
     const opt = e.target;
     displayAnswer(opt.dataset.idx == answer);
+
     setTimeout(() => {
       if (next >= quiz.length || Number(time.textContent) <= 0) {
+        clearInterval(timeId); // Clear the interval if time is 0 or negative
+        time.textContent = "0";
         displayScore();
       } else {
         updateQuiz(next++);
       }
     }, 1000);
-    if (Number(time.textContent) <= 0) {
-      clearInterval(timeId);
-      displayScore();
-    }
   };
   main.innerHTML = "";
 
@@ -198,7 +197,16 @@ function goBack() {
     generateQuiz(quiz[0]);
     time.textContent = "50";
     next = 1;
-    startTimer();
+
+    timeId = setInterval(() => {
+      if (Number(time.textContent) > 0) {
+          time.textContent -= 1;
+      } else {
+          clearInterval(timeId); // Clear the interval when the timer reaches 0
+          time.textContent = "0";
+          displayScore(); // Call a function to display the user's score or end the quiz
+      }
+  }, 1000);
   });
 }
 
