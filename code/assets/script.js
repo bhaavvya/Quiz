@@ -1,14 +1,13 @@
-
 const main = document.querySelector("main");
 
 const start = document.querySelector(".start");
 const time = document.querySelector(".time");
 const leaderboard = document.querySelector("#leaderboard");
-let newScore=0;
+let newScore = 0;
+
 function generateQuiz({ question, options, answer }) {
   let isChoose = false;
   const handleClick = (e) => {
-    // alert("handle click");
     if (isChoose) return;
     isChoose = true;
     const opt = e.target;
@@ -46,17 +45,19 @@ function generateQuiz({ question, options, answer }) {
 
 function handleSubmit(e) {
   e.preventDefault();
-  const clickSubmit = confirm("submit"); //store the value of the confirm() alert
-
-  // if the value of clickSubmit is true, executed the code below
-  if (clickSubmit) {
-    const initials = document.querySelector('input[name="initials"]').value;
-    const history = JSON.parse(localStorage.getItem("leaderboard")) || [];
-    console.log("history: ", history);
-    history.push({ name: initials, score: newScore });
-    localStorage.setItem("leaderboard", JSON.stringify(history));
+  const initials = document.querySelector('input[name="initials"]').value;
+  if(!initials){
+    alert("Please enter your initials");
+    return;
   }
+
+  const history = JSON.parse(localStorage.getItem("leaderboard")) || [];
+  console.log("history: ", history);
+  history.push({ name: initials, score: newScore });
+  localStorage.setItem("leaderboard", JSON.stringify(history));
+  displayLeaderboard();
 }
+
 function displayScore() {
   clearInterval(timeId);
   main.innerHTML = `
@@ -69,16 +70,18 @@ function displayScore() {
         <button class="submit">Submit</button>
     </form>    
     `;
-    main.querySelector(".submit").addEventListener("click", handleSubmit);
+  main.querySelector(".submit").addEventListener("click", handleSubmit);
 }
+
 function displayAnswer(isCorrect) {
-  if (!isCorrect) time.textContent = time.textContent - 10;
-  if(isCorrect)newScore++;
+  if (!isCorrect) time.textContent =Math.max(0,time.textContent - 10);
+  if (isCorrect) newScore++;
   const answerDiv = document.createElement("div");
   answerDiv.classList.add("answer");
-  answerDiv.textContent = isCorrect ? "correct!" : "Incorrect!";
+  answerDiv.textContent = isCorrect ? "Well Done👍" : "Incorrect❌";
   main.append(answerDiv);
 }
+
 function updateQuiz(next) {
   generateQuiz(quiz[next]);
 }
@@ -170,6 +173,18 @@ const quiz = [
 let next = 1;
 let timeId = null;
 
+function startTimer() {
+  timeId = setInterval(updateTimer, 1000);
+}
+
+function updateTimer() {
+  time.textContent--;
+  if (Number(time.textContent) <= 0) {
+    clearInterval(timeId);
+    displayScore();
+  }
+}
+
 function goBack() {
   main.innerHTML = `
   <h1>Coding Trivia Quiz</h1>
@@ -182,6 +197,7 @@ function goBack() {
     generateQuiz(quiz[0]);
     time.textContent = "50";
     next = 1;
+
     timeId = setInterval(() => {
       if (Number(time.textContent) > 0) {
           time.textContent -= 1;
@@ -201,7 +217,7 @@ function displayLeaderboard() {
     ${(JSON.parse(localStorage.getItem("leaderboard")) || [])
       .sort((a, b) => b.score - a.score)
       .map((item, idx) => {
-        return `<div>${idx + 1}. ${item.name} - ${item.score}</div>`;
+        return `<div>${idx + 1}. ${item.name} : ${item.score}</div>`;
       })
       .join("")}
     </div>
@@ -218,9 +234,8 @@ function displayLeaderboard() {
     }
   });
 }
+
 leaderboard.addEventListener("click", displayLeaderboard);
 
 // Initial
 goBack();
-
-
