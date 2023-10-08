@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
 
 * {
@@ -13,7 +12,9 @@
   --secondary_color: #2891d6;
   --text_color: #333;
   --background_color_start: #9dcbf7;
-  --background_color_end: #001741; 
+  --background_color_end: #001741;
+  --backgroup_color_danger: red;
+  --backgroup_color_danger_hover: rgba(255, 0, 0, 0.7);
 }
 
 body {
@@ -42,13 +43,13 @@ nav .time {
   width: 2em;
 }
 
-.navbar-logo{
-  display: flex; 
+.navbar-logo {
+  display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.navbar-logo > img{
+.navbar-logo>img {
   width: 4rem;
 }
 
@@ -130,7 +131,7 @@ main .start:hover {
   transition: background-color 0.3s ease;
 }
 
-#warning{
+#warning {
   color: red;
 }
 
@@ -147,7 +148,7 @@ input[name="initials"] {
   border-radius: 0.4rem;
 }
 
-#leaderboard{
+#leaderboard {
   cursor: pointer;
 }
 
@@ -162,7 +163,8 @@ input[name="initials"] {
 }
 
 #go_back,
-#clear_highscores {
+#clear_highscores,
+.reset_btn {
   background-color: var(--primary_color);
   color: white;
   padding: 0.5rem 1rem;
@@ -173,10 +175,24 @@ input[name="initials"] {
 }
 
 #go_back:hover,
-#clear_highscores:hover {
+#clear_highscores:hover,
+.reset_btn:hover {
   background-color: var(--secondary_color);
   /* padding: 0;
   margin: 0; */
   box-sizing: border-box;
 
+}
+
+main .reset_btn {
+  background-color: var(--backgroup_color_danger);
+}
+
+main .reset_btn:hover {
+  background-color: var(--backgroup_color_danger_hover);
+}
+
+.question-with-btn {
+  display: flex;
+  justify-content: space-between;
 }
