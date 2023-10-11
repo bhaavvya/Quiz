@@ -1,176 +1,273 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-:root {
-  --primary_color: #095ca0;
-  --secondary_color: #2891d6;
-  --text_color: #333;
-  --background_color_start: #9dcbf7;
-  --background_color_end: #001741; 
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background-image: linear-gradient(to bottom, var(--background_color_start), var(--background_color_end));
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: var(--text_color);
-  line-height: 1.6;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 2rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* ...............................................................................*/
+/* Main */
+.container {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: auto;
 }
 
 nav {
-  height: 4rem;
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
-  background-color: var(--primary_color);
-  color: white;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  width: 98%;
+  margin: auto;
 }
 
-nav .time {
-  display: inline-block;
-  width: 2em;
+nav span {
+  font-weight: 500;
+  padding: 0 1rem;
 }
 
-.navbar-logo{
-  display: flex; 
+nav #leaderboard {
+  padding-left: 8rem;
+}
+
+
+/* Right section */
+.container .right_Section {
+  width: 50rem;
+  height: 85vh;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: start;
   align-items: center;
+  flex-direction: column-reverse;
+  background: url('/assets/bgImg\ \(2\).jpg');
+  background-size: cover;
+  background-position: center;
+  margin-right: 3rem;
+}
+
+.right_Section img {
+  width: 100%;
+  height: 86%;
+  border-radius: 2rem;
+  transform: rotate(180deg);
+}
+
+.img3 {
+  position: absolute;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  top: 4rem;
+}
+
+.img2 {
+  position: absolute;
+  width: 7rem;
+  height: 10rem;
+  border-radius: 5rem;
+  bottom: -1.4rem;
+  left: -1.6rem;
+}
+
+.right_Section h3 {
+  position: relative;
+  font-weight: 600;
+  letter-spacing: .12rem;
+  word-spacing: .4rem;
+  font-size: 1.4rem;
+  line-height: normal;
+  text-align: center;
+  margin-top: 1.4rem;
+  /* color: #fff; */
+}
+
+.right_Section h3::after {
+  content: '';
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  transform: translate(-50%);
+  background: #232323;
+  width: 28px;
+  padding: .3rem;
+  border-radius: 2rem;
+}
+
+/* Left seciton */
+
+.left_Section {
+  position: relative;
+  width: 80%;
+  height: 100%;
+  display: flex;
   justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  margin: auto;
+  padding-left: 10rem;
+  /* background: #93dd93; */
 }
 
-.navbar-logo > img{
-  width: 4rem;
+.left_Section main {
+  position: relative;
 }
 
-main {
-  padding: 2rem;
-  border: 1px solid #ddd;
-  max-width: 800px;
-  min-width: 200px;
-  margin: 5rem auto;
+main h1::after {
+  content: '';
+  position: absolute;
+  width: 24%;
+  height: .3rem;
+  background: #20BDFF;
+  left: 16.8rem;
+  border-radius: 5rem;
+
+}
+
+main .option {
+  cursor: pointer;
+  margin: 1rem;
+  border-radius: 2rem;
+  background: #fff;
+}
+
+main .question::before {
+  content: '';
+  position: absolute;
+  width: 35rem;
+  height: 70vh;
+  background: -webkit-linear-gradient(to right, #EF629F, #EECDA3);
+  background: linear-gradient(to right, #EF629F, #EECDA3);
+  top: -3rem;
+  left: -1rem;
   border-radius: 1rem;
-  background-color: white;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: -1;
 }
 
-main h1 {
-  font-size: 2.5rem;
-  color: var(--primary_color);
-  margin-bottom: 1.5rem;
-  font-family: Poppins, Arial, Helvetica, sans-serif;
+main .description span {
+  font-weight: 700;
+  letter-spacing: .14rem;
 }
 
-main .description {
-  font-size: 1.1rem;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-  color: #777;
+main .answer {
+  color: #fff;
+  font-size: 1.4rem;
+  padding-top: .2rem;
+  padding-left: 2rem;
 }
 
-main .start {
-  padding: 1rem 2rem;
-  font-weight: bold;
-  color: white;
-  background-color: var(--primary_color);
-  border-radius: 0.4rem;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-main .start:hover {
-  background-color: var(--secondary_color);
-}
-
-/* Quiz styles */
-.question {
-  font-weight: bold;
-  font-size: 1.3rem;
-  margin-bottom: 1rem;
-  color: var(--text_color);
-}
-
+main .question,
 .option {
-  padding: 1rem;
-  background-color: var(--primary_color);
-  color: white;
-  border-radius: 0.5rem;
-  margin-bottom: 0.5rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  position: relative;
+  padding: 1.4rem 2rem;
 }
 
-.option:hover {
-  background-color: var(--secondary_color);
+form {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
 }
 
-/* Show result styles */
-.show_score {
-  margin-bottom: 2rem;
-  margin-top: 1rem;
+form label {
+  font-weight: 500;
 }
 
-.submit {
-  padding: 0.5rem 1rem;
-  color: white;
-  background-color: var(--primary_color);
-  border-radius: 0.4rem;
+form input {
+  border-radius: 3rem;
+  width: auto;
+  padding: .3rem;
+  outline: none;
+  margin-left: 1.4rem;
+}
+
+.left_Section h1 {
+  font-size: 3.6rem;
+  width: 70%;
+  letter-spacing: .34rem;
+  margin-bottom: .4rem;
+  font-weight: 700;
+}
+
+.left_Section p {
+  font-weight: 500;
+  width: 80%;
+  line-height: 2;
+  margin: 1rem 0;
+}
+
+button {
+  padding: 1rem 1.6rem;
+  width: 24rem;
   border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  color: #fff;
+  background: linear-gradient(to right, #A5FECB, #20BDFF, #5433FF);
+  box-shadow: 16px 12px 18px 0px rgba(0, 0, 0, 0.18);
+  -webkit-box-shadow: 16px 12px 18px 0px rgba(0, 0, 0, 0.18);
+  font-size: 1.14rem;
+  font-weight: 500;
+  letter-spacing: .02rem;
+  border-radius: 5rem;
+  margin-top: 5rem;
+  transition: all ease-in-out 0.3s;
 }
 
-#warning{
-  color: red;
+.left_Section button:hover {
+  transform: scale(1.1);
 }
 
-.submit:hover {
-  background-color: var(--secondary_color);
-}
 
-input[name="initials"] {
-  width: 8em;
-  height: 2em;
-  margin-right: 0.5em;
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 0.4rem;
-}
+@media screen and (max-width: 760px) {
+  .container {
+    margin: auto;
+  }
 
-#leaderboard{
-  cursor: pointer;
-}
+  .container .right_Section {
+    display: none;
+  }
 
-.answer {
-  border-top: 1px solid #ddd;
-  padding-top: 1rem;
-}
+  .container::before {
+    content: '';
+    position: absolute;
+    background: url('/Quiz_App/code/assets/bg.png');
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    border-radius: 50%;
+    left: -3.5rem;
+    bottom: -3.5rem;
+  }
 
-.leaderboard_show {
-  padding: 1rem;
-  background-color: white;
-}
-
-#go_back,
-#clear_highscores {
-  background-color: var(--primary_color);
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 0.4rem;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
+  .left_Section {
+    position: relative;
+    width: 100%;
+    height: 85vh;
+    text-align: center;
+    padding-left: 0;
+  }
 
 #go_back:hover,
 #clear_highscores:hover {
@@ -179,4 +276,9 @@ input[name="initials"] {
   margin: 0; */
   box-sizing: border-box;
 
+
+  .left_Section button {
+    width: 14rem;
+    margin: auto;
+  }
 }
