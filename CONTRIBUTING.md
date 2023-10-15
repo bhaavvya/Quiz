@@ -8,3 +8,7 @@
 -Github:[Victorious](https://github.com/victornwakpa)
 
 
+#### Name: [Kabir Singh](https://github.com/kabir-afk)
+- Place: Noida,Uttar Pradesh,India
+- Bio: Frontend web-dev 
+- GitHub: [kabir-afk](https://github.com/kabir-afk)

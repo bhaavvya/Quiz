@@ -1,5 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap");
 
 * {
   padding: 0;
@@ -13,12 +12,16 @@
   --secondary_color: #2891d6;
   --text_color: #333;
   --background_color_start: #9dcbf7;
-  --background_color_end: #001741; 
+  --background_color_end: #001741;
 }
 
 body {
   font-family: Arial, sans-serif;
-  background-image: linear-gradient(to bottom, var(--background_color_start), var(--background_color_end));
+  background-image: linear-gradient(
+    to bottom,
+    var(--background_color_start),
+    var(--background_color_end)
+  );
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
@@ -42,13 +45,13 @@ nav .time {
   width: 2em;
 }
 
-.navbar-logo{
-  display: flex; 
+.navbar-logo {
+  display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.navbar-logo > img{
+.navbar-logo > img {
   width: 4rem;
 }
 
@@ -130,7 +133,7 @@ main .start:hover {
   transition: background-color 0.3s ease;
 }
 
-#warning{
+#warning {
   color: red;
 }
 
@@ -147,7 +150,7 @@ input[name="initials"] {
   border-radius: 0.4rem;
 }
 
-#leaderboard{
+#leaderboard {
   cursor: pointer;
 }
 
@@ -178,5 +181,12 @@ input[name="initials"] {
   /* padding: 0;
   margin: 0; */
   box-sizing: border-box;
-
+}
+.canvas-positioning {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0%;
+  z-index: -1;
 }
